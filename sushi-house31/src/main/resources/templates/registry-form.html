@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
+<title>Main!</title>
+</head>
+<body>
+
+
+	<div class="container">
+
+			<div th:insert="fragment/header :: copy"></div>
+
+
+
+
+		<form action="#" th:action="@{/saveUser}" method="POST">
+			Username: <input type="text" th:field="${users.username}"
+				class="form-control mb-2 col-12" /> 
+			Password: <input type="text" th:field="${users.password}"
+				class="form-control mb-2 col-12" /> 
+			City: <input type="text" th:field="${users.geolocation.city}"
+				class="form-control mb-2 col-12" /> 
+			Street: <input type="text" th:field="${users.geolocation.street}"
+				class="form-control mb-2 col-12" /> 
+			House: <input type="number" th:field="${users.geolocation.house}"
+				class="form-control mb-2 col-12" /> 
+			Porch: <input type="number" th:field="${users.geolocation.porch}"
+				class="form-control mb-2 col-12" /> 	
+			<button type="submit" class="btn btn-info col-2">Save</button>
+		</form>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,15 @@
+package com.sushi.sushihouse.utility;
+
+public enum StatusOrder {
+	USER_MADE_AN_ORDER,
+	
+	CONFIRMED_MANAGER,
+	
+	COOK_ORDER_IS_READY,
+	COOK_PROBLEM,
+	COOK_NOT_PROBLEM,
+	
+	DELIVERED_ORDER,
+	DELIVERY_PROBLEM,
+	DELIVERY_NOT_PROBLEM
+}
